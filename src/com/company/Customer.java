@@ -4,13 +4,13 @@ package com.company;
 public class Customer {
     private String ID;
     private String firstName;
-    private String LastName;
-    private int phone;
+    private String lastName;
+    private String phone;
 
-    public Customer(String ID, String firstName, String lastName, int phone) {
+    public Customer(String ID, String firstName, String lastName, String phone) {
         this.ID = ID;
         this.firstName = firstName;
-        LastName = lastName;
+        this.lastName = lastName;
         this.phone = phone;
     }
 
@@ -33,18 +33,24 @@ public class Customer {
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "ID = " + ID + ", firstName = " + firstName + ", lastName = " + lastName +
+                ", phone = " + phone;
     }
 }
